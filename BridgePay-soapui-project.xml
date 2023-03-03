@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e5361453-f025-423a-a449-76c6db4b977b" activeEnvironment="Default" name="BridgePay" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="85db3caa-934e-486f-a4aa-31dbf23cdcc9" wsaVersion="NONE" name="BasicHttpBinding_ITransactionService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ITransactionService" soapVersion="1_1" anonymous="optional" definition="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?wsdl"><con:part><con:url>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="TransactionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models"/>
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITransactionService_GetAllTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTransactions"/>
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_GetAllTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTransactionsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_PostTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostTransaction"/>
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_PostTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostTransactionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ChangeStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStatus"/>
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ChangeStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStatusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ApproveSelectedItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveSelectedItems"/>
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ApproveSelectedItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveSelectedItemsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ApproveAllPendings_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveAllPendings"/>
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ApproveAllPendings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveAllPendingsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ITransactionService">
+    <wsdl:operation name="GetAllTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionService/GetAllTransactions" message="tns:ITransactionService_GetAllTransactions_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionService/GetAllTransactionsResponse" message="tns:ITransactionService_GetAllTransactions_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="PostTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionService/PostTransaction" message="tns:ITransactionService_PostTransaction_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionService/PostTransactionResponse" message="tns:ITransactionService_PostTransaction_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionService/ChangeStatus" message="tns:ITransactionService_ChangeStatus_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionService/ChangeStatusResponse" message="tns:ITransactionService_ChangeStatus_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveSelectedItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionService/ApproveSelectedItems" message="tns:ITransactionService_ApproveSelectedItems_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionService/ApproveSelectedItemsResponse" message="tns:ITransactionService_ApproveSelectedItems_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveAllPendings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionService/ApproveAllPendings" message="tns:ITransactionService_ApproveAllPendings_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionService/ApproveAllPendingsResponse" message="tns:ITransactionService_ApproveAllPendings_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITransactionService" type="tns:ITransactionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetAllTransactions">
+      <soap:operation soapAction="http://tempuri.org/ITransactionService/GetAllTransactions" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostTransaction">
+      <soap:operation soapAction="http://tempuri.org/ITransactionService/PostTransaction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStatus">
+      <soap:operation soapAction="http://tempuri.org/ITransactionService/ChangeStatus" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveSelectedItems">
+      <soap:operation soapAction="http://tempuri.org/ITransactionService/ApproveSelectedItems" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveAllPendings">
+      <soap:operation soapAction="http://tempuri.org/ITransactionService/ApproveAllPendings" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransactionService">
+    <wsdl:port name="BasicHttpBinding_ITransactionService" binding="tns:BasicHttpBinding_ITransactionService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models"/>
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:element name="GetAllTransactions">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllTransactionsResult" nillable="true" type="q1:ArrayOfTransactions" xmlns:q1="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="transaction" nillable="true" type="q2:Transactions" xmlns:q2="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostTransactionResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int"/>
+        <xs:element minOccurs="0" name="status" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeStatusResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApproveSelectedItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ids" nillable="true" type="q3:ArrayOfint" xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApproveSelectedItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApproveSelectedItemsResult" nillable="true" type="q4:ArrayOfTransactions" xmlns:q4="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApproveAllPendings">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApproveAllPendingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApproveAllPendingsResult" nillable="true" type="q5:ArrayOfTransactions" xmlns:q5="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models">
+  <xs:complexType name="ArrayOfTransactions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transactions" nillable="true" type="tns:Transactions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransactions" nillable="true" type="tns:ArrayOfTransactions"/>
+  <xs:complexType name="Transactions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:int"/>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Status" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Transactions" nillable="true" type="tns:Transactions"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOfint">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="int" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfint" nillable="true" type="tns:ArrayOfint"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint></con:endpoints><con:operation id="9f870247-7d87-4549-a5c2-b4b8a538e1e1" isOneWay="false" action="http://tempuri.org/ITransactionService/ApproveAllPendings" name="ApproveAllPendings" bindingOperationName="ApproveAllPendings" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7cec6121-db26-45e7-b50c-38ea57b3ed9f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ApproveAllPendings/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITransactionService/ApproveAllPendings"/></con:call></con:operation><con:operation id="9d5809de-8507-4e04-aca5-6a86121f027d" isOneWay="false" action="http://tempuri.org/ITransactionService/ApproveSelectedItems" name="ApproveSelectedItems" bindingOperationName="ApproveSelectedItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1dbcdd3b-c6fd-4a9a-9b36-aa34c7ad00f3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ApproveSelectedItems>\r
+         <!--Optional:-->\r
+         <tem:Ids>\r
+            <!--Zero or more repetitions:-->\r
+            <arr:int>?</arr:int>\r
+         </tem:Ids>\r
+      </tem:ApproveSelectedItems>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITransactionService/ApproveSelectedItems"/></con:call></con:operation><con:operation id="528eb483-8c79-4df2-a186-bb3658dd1529" isOneWay="false" action="http://tempuri.org/ITransactionService/ChangeStatus" name="ChangeStatus" bindingOperationName="ChangeStatus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d2a18273-8a48-4737-b73a-fdd781f8ef61" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ChangeStatus>\r
+         <!--Optional:-->\r
+         <tem:id>?</tem:id>\r
+         <!--Optional:-->\r
+         <tem:status>?</tem:status>\r
+      </tem:ChangeStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITransactionService/ChangeStatus"/></con:call></con:operation><con:operation id="009e7dda-cb88-49da-b637-d72524286685" isOneWay="false" action="http://tempuri.org/ITransactionService/GetAllTransactions" name="GetAllTransactions" bindingOperationName="GetAllTransactions" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="de39b2b7-dd59-4a99-90e5-20c0133f4e3e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetAllTransactions/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITransactionService/GetAllTransactions"/></con:call></con:operation><con:operation id="e3442802-639e-45fa-9b3c-8c4f28cc6e85" isOneWay="false" action="http://tempuri.org/ITransactionService/PostTransaction" name="PostTransaction" bindingOperationName="PostTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="427e2e5c-5a8c-4926-a2c2-62925bacf5d8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:brid="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:PostTransaction>\r
+         <!--Optional:-->\r
+         <tem:transaction>\r
+            <!--Optional:-->\r
+            <brid:Amount>?</brid:Amount>\r
+            <!--Optional:-->\r
+            <brid:Date>?</brid:Date>\r
+            <!--Optional:-->\r
+            <brid:Id>?</brid:Id>\r
+            <!--Optional:-->\r
+            <brid:Name>?</brid:Name>\r
+            <!--Optional:-->\r
+            <brid:Status>?</brid:Status>\r
+         </tem:transaction>\r
+      </tem:PostTransaction>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ITransactionService/PostTransaction"/></con:call></con:operation></con:interface><con:testSuite id="f5887f8b-04d6-4204-b760-fdfece20b9c6" name="BasicHttpBinding_ITransactionService TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="756d400b-33e5-4652-9d5d-681a831da74f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ApproveAllPendings TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="8aacfeb3-1a0d-428f-bada-2b82dc07afd5" name="ApproveAllPendings"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_ITransactionService</con:interface><con:operation>ApproveAllPendings</con:operation><con:request name="ApproveAllPendings" id="0fc985cf-11bc-4462-8966-3649a44559ea"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ApproveAllPendings/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/ITransactionService/ApproveAllPendings"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1e2b5816-407d-44bc-8a28-35353166bdfb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ApproveSelectedItems TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="a8e8864e-816e-497e-b6f9-d309bd27142a" name="ApproveSelectedItems"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_ITransactionService</con:interface><con:operation>ApproveSelectedItems</con:operation><con:request name="ApproveSelectedItems" id="001d249e-aa58-4a1f-ad7a-837685192699"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ApproveSelectedItems>\r
+         <!--Optional:-->\r
+         <tem:Ids>\r
+            <!--Zero or more repetitions:-->\r
+            <arr:int>4</arr:int>\r
+         </tem:Ids>\r
+      </tem:ApproveSelectedItems>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://tempuri.org/ITransactionService/ApproveSelectedItems" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="fe842592-4982-401d-949a-dfd4f8c16981" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ChangeStatus TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="10991337-c8da-477a-bd76-e75d83616ce5" name="ChangeStatus"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_ITransactionService</con:interface><con:operation>ChangeStatus</con:operation><con:request name="ChangeStatus" id="3e494330-7636-4736-9271-188893120fce"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ChangeStatus>\r
+         <!--Optional:-->\r
+         <tem:id>?</tem:id>\r
+         <!--Optional:-->\r
+         <tem:status>?</tem:status>\r
+      </tem:ChangeStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/ITransactionService/ChangeStatus"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="05ba98bc-c27f-4abb-853c-23dd1ed09622" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAllTransactions TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="b648b77a-904a-4e48-b8f8-96fe5b45d5d8" name="GetAllTransactions"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_ITransactionService</con:interface><con:operation>GetAllTransactions</con:operation><con:request name="GetAllTransactions" id="617ac5a8-1672-4799-9c29-5eac428bad0a"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetAllTransactions/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/ITransactionService/GetAllTransactions"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="92af0f05-eb5b-4250-b9c1-626d4e92db79" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PostTransaction TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="bf43e6fc-9347-4547-8666-db210b15ca18" name="PostTransaction"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_ITransactionService</con:interface><con:operation>PostTransaction</con:operation><con:request name="PostTransaction" id="10123e04-0f60-449e-a98c-f7a8a7929f82"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:brid="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:PostTransaction>\r
+         <!--Optional:-->\r
+         <tem:transaction>\r
+            <!--Optional:-->\r
+            <brid:Amount>?</brid:Amount>\r
+            <!--Optional:-->\r
+            <brid:Date>?</brid:Date>\r
+            <!--Optional:-->\r
+            <brid:Id>?</brid:Id>\r
+            <!--Optional:-->\r
+            <brid:Name>?</brid:Name>\r
+            <!--Optional:-->\r
+            <brid:Status>?</brid:Status>\r
+         </tem:transaction>\r
+      </tem:PostTransaction>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/ITransactionService/PostTransaction"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

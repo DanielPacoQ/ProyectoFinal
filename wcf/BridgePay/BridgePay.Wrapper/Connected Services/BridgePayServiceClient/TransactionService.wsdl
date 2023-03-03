@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="TransactionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BridgePay.WCF.Models" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITransactionService_GetAllTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTransactions" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_GetAllTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_PostTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_PostTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ChangeStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStatus" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ChangeStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ApproveSelectedItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveSelectedItems" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ApproveSelectedItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveSelectedItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ApproveAllPendings_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveAllPendings" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionService_ApproveAllPendings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveAllPendingsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITransactionService">
+    <wsdl:operation name="GetAllTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionService/GetAllTransactions" message="tns:ITransactionService_GetAllTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionService/GetAllTransactionsResponse" message="tns:ITransactionService_GetAllTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionService/PostTransaction" message="tns:ITransactionService_PostTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionService/PostTransactionResponse" message="tns:ITransactionService_PostTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionService/ChangeStatus" message="tns:ITransactionService_ChangeStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionService/ChangeStatusResponse" message="tns:ITransactionService_ChangeStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveSelectedItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionService/ApproveSelectedItems" message="tns:ITransactionService_ApproveSelectedItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionService/ApproveSelectedItemsResponse" message="tns:ITransactionService_ApproveSelectedItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveAllPendings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionService/ApproveAllPendings" message="tns:ITransactionService_ApproveAllPendings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionService/ApproveAllPendingsResponse" message="tns:ITransactionService_ApproveAllPendings_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITransactionService" type="tns:ITransactionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllTransactions">
+      <soap:operation soapAction="http://tempuri.org/ITransactionService/GetAllTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostTransaction">
+      <soap:operation soapAction="http://tempuri.org/ITransactionService/PostTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStatus">
+      <soap:operation soapAction="http://tempuri.org/ITransactionService/ChangeStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveSelectedItems">
+      <soap:operation soapAction="http://tempuri.org/ITransactionService/ApproveSelectedItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveAllPendings">
+      <soap:operation soapAction="http://tempuri.org/ITransactionService/ApproveAllPendings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransactionService">
+    <wsdl:port name="BasicHttpBinding_ITransactionService" binding="tns:BasicHttpBinding_ITransactionService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/BridgePay.WCF/TransactionService/TransactionService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

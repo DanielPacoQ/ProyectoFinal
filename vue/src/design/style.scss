@@ -1,0 +1,101 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://next.vuetifyjs.com/features/sass-variables/`
+// @use 'vuetify' with (
+//   $color-pack: false
+// );
+@import 'bulma';
+@import 'variables';
+
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #253444;
+  }
+
+  body{
+    background: #d8d8d8dc;
+  }
+
+  th, tr, td{
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+  
+  .card {
+    margin-bottom: 2em;
+  }
+  
+  .main-section {
+    padding: 1rem 1rem;
+  }
+  
+  label.label {
+    font-weight: normal;
+  }
+  
+  button.link {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input.invalid,
+  textarea.invalid,
+  select.invalid {
+    border-left: 10px red solid !important;
+  }
+  
+  .logo{
+    max-width: 100%;
+    max-height: 80px;
+  }
+  
+  thead{
+    background: #42b983;
+  }
+  
+  .v-btn{
+    background-color: rgb(234, 233, 233) !important;
+  }
+
+  .icon-center{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.titulo{
+  color: #585858;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+}
